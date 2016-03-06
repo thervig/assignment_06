@@ -8,10 +8,10 @@ def generate_random(n):
    :return:
    """
    points = random.Random()
-   points_list = []
+   marks = ['Rare', 'Medium-Rare', 'Well-Done', 'Burnt']
    for i in range(n):
-       points_list.append((round(points.uniform(0, 1), 2), round(points.uniform(0, 1), 2)))
-   return (points_list)
+       marks.append((round(points.uniform(0, 1), 2), round(points.uniform(0, 1), 2), cook = points.choice(marks)))
+   return (marks)
    
   def shift_point(point, x_shift, y_shift):
     """
