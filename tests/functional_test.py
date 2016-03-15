@@ -15,7 +15,7 @@ class TestFunctionalPointPattern(unittest.TestCase):
         marks = ['Rare', 'Medium-Rare', 'Well-Done', 'Burnt']
         while i < 100:
             seed = (round(random.random(),2), round(random.random(),2))
-            self.points.append(seed)
+            self.points.append(point.Point(seed[0], seed[1], mark=random.choice(marks)))
             n_additional = random.randint(5,10)
             i += 1
             c = random.choice([0,1])
@@ -24,7 +24,7 @@ class TestFunctionalPointPattern(unittest.TestCase):
                     x_offset = random.randint(0,10) / 100
                     y_offset = random.randint(0,10) / 100
                     pt = (round(seed[0] + x_offset, 2), round(seed[1] + y_offset,2))
-                    self.points.append(pt)
+                    self.points.append(point.Point(pt[0], pt[1], mark=random.choice(marks)))
                     i += 1
                     if i == 100:
                         break
