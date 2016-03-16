@@ -7,7 +7,7 @@ class Point(object):
   def __init__(self, x, y, kw='mark'):
       self.x = x
       self.y = y
-      self.mark = mark
+      self.kw = kw
   
   def check_coincident(self, test):
       return check_coincident((self.x, self.y)), test)
