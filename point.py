@@ -14,5 +14,5 @@ class Point(object):
   
   def shift_point(self, self.x, self.y):
       point = utils.shift_point(self.x, self.y)
-      self.x = utils,getx(point)
+      self.x = utils.getx(point)
       self.y = utils.gety(point)
