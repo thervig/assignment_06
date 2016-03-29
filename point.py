@@ -4,7 +4,7 @@ from .. import utils
 
 class Point(object):
   
-  def __init__(self, x, y, mark):
+  def __init__(self, x, y, mark={}):
       self.x = x
       self.y = y
       self.mark = mark
