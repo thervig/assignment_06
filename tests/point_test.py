@@ -21,13 +21,13 @@ class TestPointClass(unittest.TestCase):
         Point3 = point.Point(0, 9)
         Point4 = point.Point(1, 10)
         
-        self.assertTrue(Point1.check_coincident(Point2))
-        self.assertFalse(Point1.check_coincident(Point3))
-        self.assertFalse(Point1.check_coinsident(Point4))
+        self.assertTrue(Point1.point.check_coincident(Point2))
+        self.assertFalse(Point1.point.check_coincident(Point3))
+        self.assertFalse(Point1.point.check_coinsident(Point4))
     
     def test_shift(self):
         test = point.Point(0, 10)
-        test.shift_point(5, 5)
+        test.point.shift_point(5, 5)
         
         self.assertEqual(test.x, 5)
         self.assertEqual(test.y, 15)
