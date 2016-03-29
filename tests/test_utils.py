@@ -16,4 +16,4 @@ class TestUtils(unittest.TestCase):
     
     def significant_distance_test(self):
         self.assertFalse(analytics.significant_distance(9.9, 15, 10))
-        self.assertTrue(analytics.significant_distance(.05, .06, 1.0)
+        self.assertTrue(analytics.significant_distance(.05, .06, 1.0))
