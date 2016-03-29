@@ -14,6 +14,20 @@ def generate_random_makrs(n, marks=[]):
             random_marks.append(Point(points.randint(0, 100), points.randint(0,100), points.choice(marks)))
             
    return random_marks
+   
+
+def generate_random(n):
+   """
+   Generates n random points within the domain of 0 - 1.
+   :param n:
+   :return:
+   """
+   points = random.Random()
+   points_list = []
+   for i in range(n):
+       points_list.append((round(points.uniform(0, 1), 2), round(points.uniform(0, 1), 2)))
+   return (points_list)
+
 
    
 def shift_point(point, x_shift, y_shift):
