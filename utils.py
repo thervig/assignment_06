@@ -1,7 +1,7 @@
 import math
 import random
 
-def generate_random_makrs(n, marks=[]):
+def generate_random_marks(n, marks=[]):
    
    points = random.Random()
    random_marks = []
