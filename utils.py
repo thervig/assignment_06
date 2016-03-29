@@ -1,17 +1,20 @@
 import math
 import random
 
-def generate_random(n):
-   """
-   Generates n random points within the domain of 0 - 1.
-   :param n:
-   :return:
-   """
+def generate_random_makrs(n, marks=[]):
+   
    points = random.Random()
-   marks = ['Rare', 'Medium-Rare', 'Well-Done', 'Burnt']
-   for i in range(n):
-       marks.append((round(points.uniform(0, 1), 2), round(points.uniform(0, 1), 2), cook = points.choice(marks)))
-   return (marks)
+   random_marks = []
+   
+   if marks is None:
+       for i in range(n):
+           random_marks.append(Point(points.randint(0, 100), points.randint(0,100)))
+   else:
+       for i in range(n):
+            random_marks.append(Point(points.randint(0, 100), points.randint(0,100), points.choice(marks)))
+            
+   return random_marks
+
    
   def shift_point(point, x_shift, y_shift):
     """
