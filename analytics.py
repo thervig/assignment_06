@@ -54,7 +54,7 @@ def average_nearest_neighbor_distance(points, mark=None):
     
     temp = []
 
-   if mark is not None:
+    if mark is not None:
        for point in points:
             if point.mark is mark:
                 temp.append(point)
