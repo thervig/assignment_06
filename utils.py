@@ -76,6 +76,40 @@ def check_in(point, point_list):
     """
     return point in point_list
 
+def manhattan_distance(a, b):
+    """
+    Compute the Manhattan distance between two points
+    Parameters
+    ----------
+    a : tuple
+        A point in the form (x,y)
+    b : tuple
+        A point in the form (x,y)
+    Returns
+    -------
+    distance : float
+               The Manhattan distance between the two points
+    """
+    distance =  abs(a[0] - b[0]) + abs(a[1] - b[1])
+    return distance
+
+def euclidean_distance(a, b):
+    """
+    Compute the Euclidean distance between two points
+    Parameters
+    ----------
+    a : tuple
+        A point in the form (x,y)
+    b : tuple
+        A point in the form (x,y)
+    Returns
+    -------
+    distance : float
+               The Euclidean distance between the two points
+    """
+    distance = math.sqrt((a[0] - b[0])**2 + (a[1] - b[1])**2)
+    return distance
+
 def getx(point):
     """
     A simple method to return the x coordinate of
