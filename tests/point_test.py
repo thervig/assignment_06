@@ -8,16 +8,18 @@ class TestPointClass(unittest.TestCase):
     def setUp(self):
         pass
 
-    def set_attributes(self, x, y):
+    def set_attributes(self):
+        x = 3
+        y = 9
         test = Point(x, y)
         self.assertEqual(test.x, x)
         self.assertEqual(test.y, y)
         
     def test_coincident(self):
-        Point1 = (0, 10)
-        Point2 = (0, 10)
-        Point3 = (0, 9)
-        Point4 = (1, 10)
+        Point1 = Point(0, 10)
+        Point2 = Point(0, 10)
+        Point3 = Point(0, 9)
+        Point4 = Point(1, 10)
         
         self.assertTrue(Point1.check_coincident(Point2))
         self.assertFalse(Point1.check_coincident(Point3))
@@ -32,6 +34,23 @@ class TestPointClass(unittest.TestCase):
         
     def test_marked_points(self):
         random.seed(12345)
-        marks = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
+        marks = ['Blue', 'Rare', 'Medium-Rare', 'Medium', 'Medium-Well', 'Well-Done']
         points = []
         i = 0
+        for i in range(20):
+            points.append(Point(0, 0, random.choice(marks)))
+        
+        count = {}
+        for i in range(len(points)):
+            if points[i].mark in count:
+                count[points[i].mark] = count[points[i].mark] + 1
+            else:
+                count[points[i].mark] = 1 
+                
+        print count
+        
+        self.assertEqual(count['Rare'], 5)
+        self.assertEqual(count['Medium-Well'], 9)
+            
+            
+        
