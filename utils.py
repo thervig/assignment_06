@@ -16,7 +16,7 @@ def generate_random_makrs(n, marks=[]):
    return random_marks
 
    
-  def shift_point(point, x_shift, y_shift):
+def shift_point(point, x_shift, y_shift):
     """
     Shift a point by some amount in the x and y directions
     Parameters
