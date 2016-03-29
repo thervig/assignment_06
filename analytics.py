@@ -81,11 +81,12 @@ def average_nearest_neighbor_distance(points, mark=None):
         mean_distance = sum_nn_dis / len(points)
     return mean_distance
 
-def permutations(p = 99, n = 100):
+def permutations(p = 99, marks=None):
+    n = 100
     permutations = []
     for i in range(p):
         points_list = generate_random(n)
-        permutations.append(average_nearest_neighbor_distance(points_list))
+        permutations.append(average_nearest_neighbor_distance(utils.generate_random(n), marks)
 
     return permutations
 
