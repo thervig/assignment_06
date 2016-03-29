@@ -12,7 +12,7 @@ class TestFunctionalPointPattern(unittest.TestCase):
         random.seed(12345)
         i = 0
         self.points = []
-        marks = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
+        marks = ['Blue', 'Rare', 'Medium-Rare', 'Medium', 'Medium-Well', 'Well-Done']
         while i < 100:
             seed = (round(random.random(),2), round(random.random(),2))
             self.points.append(point.Point(seed[0], seed[1], mark=random.choice(marks)))
