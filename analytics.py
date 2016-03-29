@@ -86,7 +86,7 @@ def permutations(p = 99, marks=None):
     permutations = []
     for i in range(p):
         points_list = generate_random(n)
-        permutations.append(average_nearest_neighbor_distance(utils.generate_random(n), marks)
+        permutations.append(average_nearest_neighbor_distance(utils.generate_random(n), marks))
 
     return permutations
 
