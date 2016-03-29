@@ -9,10 +9,8 @@ class Point(object):
       self.y = y
       self.mark = mark
   
-  def check_coincident(self, test):
-      return check_coincident((self.x, self.y)), test)
+  def point_check_coincident(self, test):
+      return check_coincident((self.x, self.y), test)
   
-  def shift_point(self, self.x, self.y):
-      point = utils.shift_point(self.x, self.y)
-      self.x = utils.getx(point)
-      self.y = utils.gety(point)
+  def point_shift_point(self, x_shift, y_shift):
+      utils.shift_point((self.x, self.y), x_shift, y_shift)
