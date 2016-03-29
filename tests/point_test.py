@@ -47,7 +47,7 @@ class TestPointClass(unittest.TestCase):
             else:
                 count[points[i].mark] = 1 
                 
-        print count
+        print (count)
         
         self.assertEqual(count['Rare'], 5)
         self.assertEqual(count['Medium-Well'], 9)
