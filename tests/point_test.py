@@ -49,8 +49,8 @@ class TestPointClass(unittest.TestCase):
                 
         print (count)
         
-        self.assertEqual(count['Rare'], 5)
-        self.assertEqual(count['Medium-Well'], 9)
+        self.assertEqual(count['Rare'], 4)
+        self.assertEqual(count['Medium-Well'], 4)
             
             
         
