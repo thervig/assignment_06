@@ -4,10 +4,10 @@ from .. import utils
 
 class Point(object):
   
-  def __init__(self, x, y, kw='mark'):
+  def __init__(self, x, y, mark):
       self.x = x
       self.y = y
-      self.kw = kw
+      self.mark = mark
   
   def check_coincident(self, test):
       return check_coincident((self.x, self.y)), test)
