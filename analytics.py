@@ -34,7 +34,7 @@ def find_largest_city(gj):
     return city, max_population
 
 
-def average_nearest_neighbor_distance(points):
+def average_nearest_neighbor_distance(points, mark=None):
     """
     Given a set of points, compute the average nearest neighbor.
     Parameters
@@ -51,6 +51,17 @@ def average_nearest_neighbor_distance(points):
      Measure of Spatial Relationships in Populations. Ecology. 35(4)
      p. 445-453.
     """
+    
+    temp = []
+
+   if mark is not None:
+       for point in points:
+            if point.mark is mark:
+                temp.append(point)
+    else:
+        temp = points
+        
+        
     sum_nn_dis = 0
 
     for point_1 in points:
